@@ -1,0 +1,99 @@
+{
+	"resourceType": "Observation",
+	"id": "{{ id }}",
+	"meta": {
+	  "profile": [
+		"http://hl7.org/fhir/uv/cardx-htn/StructureDefinition/average-smbp"
+	  ]
+	},
+	"text": {
+	  "status": "extensions",
+	  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"AverageSMBP\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;AverageSMBP&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-average-smbp.html\">Average Self-measured Blood Pressure</a></p></div><p><b>Number of Measurements</b>: 28</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span>, Self-monitoring <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#310858007)</span></p><p><b>code</b>: Blood pressure panel mean systolic and mean diastolic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#96607-7)</span></p><p><b>subject</b>: <a href=\"#\" onclick=\"return false;\">Patient/14765</a> &quot; Sarah Smith&quot;</p><p><b>effective</b>:2024-01-01T00:00:01-09:00--&gt;2024-01-07T23:59:59-09:00</p><p><b>issued</b>:2024-01-08T00:01:00-09:00</p><p><b>device</b>: <a href=\"#\" onclick=\"return false;\">Device/14703</a></p><p><b>derivedFrom</b>: </p><ul><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li><li><a href=\"#\" onclick=\"return false;\">Observation/ddddd</a></li></ul><blockquote><p><b>component</b></p><p><b>code</b>: Systolic blood pressure mean <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#96608-5)</span></p><p><b>value</b>:128mm[Hg]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Diastolic blood pressure mean <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#96609-3)</span></p><p><b>value</b>:85mm[Hg]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote></div>"
+	},
+	"extension": [
+	  {
+		"url": "http://hl7.org/fhir/uv/cardx-htn/StructureDefinition/NumberOfMeasurementsExt",
+		"valueQuantity": { "value": "{{ count }}" }
+	  }
+	],
+	"status": "final",
+	"category": [
+	  {
+		"coding": [
+		  {
+			"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+			"code": "{{ category }}"
+			}
+			]
+		},
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "{{ category_code }}",
+					"display": "Self-monitoring"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "96607-7",
+				"display": "Blood pressure panel mean systolic and mean diastolic"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/{{ patient_id }}"
+	},
+	"effectivePeriod": {
+		"start": "{{ start_date }}",
+		"end": "{{ end_date }}"
+	},
+	"issued": "2024-01-08T00:01:00-09:00",
+	"derivedFrom": [
+		{% for observation in observations %}
+		{
+		  "reference": "{{ observation }}"
+		}{% if not loop.last %},{% endif %}
+		{% endfor %}
+	],
+	"component": [
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "96608-5",
+						"display": "Systolic blood pressure mean"
+					}
+				]
+			},
+			"valueQuantity": {
+				"value": "{{ sys_pressure }}",
+				"unit": "mm[Hg]",
+				"system": "http://unitsofmeasure.org",
+				"code": "mm[Hg]"
+			}
+		},
+		{
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "96609-3",
+						"display": "Diastolic blood pressure mean"
+					}
+				]
+			},
+			"valueQuantity": {
+				"value": "{{ dia_pressure }}",
+				"unit": "mm[Hg]",
+				"system": "http://unitsofmeasure.org",
+				"code": "mm[Hg]"
+			}
+		}
+	]
+}
